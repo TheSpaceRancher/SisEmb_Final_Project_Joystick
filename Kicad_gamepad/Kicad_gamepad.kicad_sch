@@ -2622,6 +2622,12 @@
 		(uuid "2892c979-28c1-4da5-aec4-9cf2f9701e2d")
 	)
 	(junction
+		(at 100.33 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4278b28a-1282-45cf-b301-6c87485a31a6")
+	)
+	(junction
 		(at 93.98 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2706,6 +2712,12 @@
 		(uuid "a4ea4398-0c59-4025-baa3-95fffee5a922")
 	)
 	(junction
+		(at 173.99 140.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a563009d-9d54-4aeb-92b2-9e9a0d9f10f3")
+	)
+	(junction
 		(at 247.65 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2728,6 +2740,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b07921d6-3581-4a9e-b74d-a300d94e40df")
+	)
+	(junction
+		(at 100.33 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b2878262-9459-4623-b17f-ce942567cd0a")
 	)
 	(junction
 		(at 219.71 157.48)
@@ -2766,6 +2784,12 @@
 		(uuid "df266346-9b7f-4405-8bc0-e3e4a03f8845")
 	)
 	(junction
+		(at 106.68 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eefd4fa4-f2f9-4535-9fd6-961fbd23a3b9")
+	)
+	(junction
 		(at 185.42 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2777,12 +2801,6 @@
 		(color 0 0 0 0)
 		(uuid "fbb52a51-db1a-41d6-aec8-04e6b54b7f1b")
 	)
-	(junction
-		(at 100.33 144.78)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fe742afd-38ca-4382-b317-a72084832810")
-	)
 	(wire
 		(pts
 			(xy 158.75 138.43) (xy 173.99 138.43)
@@ -2792,6 +2810,16 @@
 			(type default)
 		)
 		(uuid "020243ed-3f30-4f0f-9cf2-d7b3492e587d")
+	)
+	(wire
+		(pts
+			(xy 105.41 36.83) (xy 100.33 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02c779ca-5175-4dfa-9de0-d8b88c225ff0")
 	)
 	(wire
 		(pts
@@ -3015,7 +3043,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 50.8) (xy 99.06 73.66)
+			(xy 99.06 50.8) (xy 99.06 71.12)
 		)
 		(stroke
 			(width 0)
@@ -3052,6 +3080,16 @@
 			(type default)
 		)
 		(uuid "1b4850f3-64ca-4683-a7dd-d363428235c3")
+	)
+	(wire
+		(pts
+			(xy 93.98 137.16) (xy 132.08 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ce7b0b5-34fc-4d9e-bcad-5df2c39fc2b0")
 	)
 	(wire
 		(pts
@@ -3095,7 +3133,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 53.34) (xy 82.55 53.34)
+			(xy 81.28 53.34) (xy 97.79 53.34)
 		)
 		(stroke
 			(width 0)
@@ -3162,16 +3200,6 @@
 			(type default)
 		)
 		(uuid "2a05c1c2-501a-47b4-b4d7-de59652718c1")
-	)
-	(wire
-		(pts
-			(xy 93.98 137.16) (xy 132.08 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ac4b893-6b78-429b-be51-f6b778764170")
 	)
 	(wire
 		(pts
@@ -3245,6 +3273,16 @@
 	)
 	(wire
 		(pts
+			(xy 106.68 45.72) (xy 106.68 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "338294ab-6f5a-4f9f-8094-cf72d1ccb519")
+	)
+	(wire
+		(pts
 			(xy 53.34 90.17) (xy 45.72 90.17)
 		)
 		(stroke
@@ -3265,13 +3303,13 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 43.18) (xy 134.62 43.18)
+			(xy 99.06 71.12) (xy 104.14 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3c19466d-4066-4054-9518-ea2725982532")
+		(uuid "38566877-b302-4d16-af4d-5bbb75c0ffe7")
 	)
 	(wire
 		(pts
@@ -3425,7 +3463,17 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 144.78) (xy 134.62 144.78)
+			(xy 173.99 140.97) (xy 185.42 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b3563bd-2b5b-4fc9-953a-aa61d5314399")
+	)
+	(wire
+		(pts
+			(xy 45.72 144.78) (xy 100.33 144.78)
 		)
 		(stroke
 			(width 0)
@@ -3475,16 +3523,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 73.66) (xy 104.14 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "595a8bb5-4ab4-43b5-a9a0-8416670c804e")
-	)
-	(wire
-		(pts
 			(xy 52.07 113.03) (xy 52.07 116.84)
 		)
 		(stroke
@@ -3492,16 +3530,6 @@
 			(type default)
 		)
 		(uuid "59b2654a-e3dc-4df8-8977-08cdea620153")
-	)
-	(wire
-		(pts
-			(xy 45.72 144.78) (xy 100.33 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "59d8a7bb-beb8-42d5-9068-a38860a81504")
 	)
 	(wire
 		(pts
@@ -3575,7 +3603,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 138.43) (xy 173.99 142.24)
+			(xy 173.99 138.43) (xy 173.99 140.97)
 		)
 		(stroke
 			(width 0)
@@ -3645,6 +3673,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 144.78) (xy 134.62 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e49bcf4-a925-4ffe-b77e-8219c321cb44")
+	)
+	(wire
+		(pts
 			(xy 165.1 109.22) (xy 182.88 109.22)
 		)
 		(stroke
@@ -3665,13 +3703,13 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 45.72) (xy 100.33 144.78)
+			(xy 91.44 133.35) (xy 97.79 133.35)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "70aad9a3-ee56-4f4f-a6f4-959a517a2a9a")
+		(uuid "71656ba9-7cb4-4547-8fbe-8982d74af76c")
 	)
 	(wire
 		(pts
@@ -3692,6 +3730,36 @@
 			(type default)
 		)
 		(uuid "745f07e1-ffc3-4dbb-a821-c56f0758e2e9")
+	)
+	(wire
+		(pts
+			(xy 173.99 140.97) (xy 173.99 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74849f18-7e80-4633-9792-7f5740ffdd6d")
+	)
+	(wire
+		(pts
+			(xy 100.33 43.18) (xy 100.33 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7573a92d-1cba-4281-89f0-050754ad354d")
+	)
+	(wire
+		(pts
+			(xy 101.6 48.26) (xy 101.6 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75dab122-fc98-4a57-bd61-cb8b6800f6d3")
 	)
 	(wire
 		(pts
@@ -3775,6 +3843,16 @@
 	)
 	(wire
 		(pts
+			(xy 97.79 111.76) (xy 97.79 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "809fcc2f-9fe0-45ad-8d91-04bfa2f98e70")
+	)
+	(wire
+		(pts
 			(xy 97.79 53.34) (xy 97.79 106.68)
 		)
 		(stroke
@@ -3792,16 +3870,6 @@
 			(type default)
 		)
 		(uuid "81728f48-c6b8-409e-a9b9-2cf695109d82")
-	)
-	(wire
-		(pts
-			(xy 101.6 71.12) (xy 104.14 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "834ddcb7-1c5f-4eef-99e6-0815ddb5c57e")
 	)
 	(wire
 		(pts
@@ -3942,6 +4010,16 @@
 			(type default)
 		)
 		(uuid "94f1d682-49e1-4c9e-b546-5746a046b6e5")
+	)
+	(wire
+		(pts
+			(xy 91.44 139.7) (xy 99.06 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "959d8beb-00bf-45bd-9ca2-d4563df8b32b")
 	)
 	(wire
 		(pts
@@ -4115,16 +4193,6 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 48.26) (xy 101.6 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c178b849-2958-4ee0-936b-699e9609dae5")
-	)
-	(wire
-		(pts
 			(xy 52.07 119.38) (xy 52.07 125.73)
 		)
 		(stroke
@@ -4185,6 +4253,36 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 36.83) (xy 100.33 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9c7c9c3-d263-4eea-8f5b-45245af2dc47")
+	)
+	(wire
+		(pts
+			(xy 99.06 114.3) (xy 99.06 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb20018a-1b52-4b4d-85b9-e427ea2dea95")
+	)
+	(wire
+		(pts
+			(xy 99.06 114.3) (xy 104.14 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc269606-abe3-4245-89fc-135308a7b6d8")
+	)
+	(wire
+		(pts
 			(xy 184.15 60.96) (xy 185.42 60.96)
 		)
 		(stroke
@@ -4192,6 +4290,26 @@
 			(type default)
 		)
 		(uuid "ce66a6cc-092f-4568-9711-1faf9ed53869")
+	)
+	(wire
+		(pts
+			(xy 106.68 52.07) (xy 134.62 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cee413b3-f9a2-4239-ab78-15f6f0f1cf6c")
+	)
+	(wire
+		(pts
+			(xy 97.79 111.76) (xy 104.14 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0ec0726-631f-4576-b70a-644b08c0a40c")
 	)
 	(wire
 		(pts
@@ -4205,13 +4323,13 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 43.18) (xy 134.62 52.07)
+			(xy 101.6 73.66) (xy 104.14 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d3a913b5-430c-4110-81a4-c0c4821c4516")
+		(uuid "d2da8707-5c5c-4d7a-ab2e-b72b59fbf215")
 	)
 	(wire
 		(pts
@@ -4305,6 +4423,16 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 43.18) (xy 100.33 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1dfe98f-459e-4bd8-8795-aff80c51e76b")
+	)
+	(wire
+		(pts
 			(xy 81.28 48.26) (xy 101.6 48.26)
 		)
 		(stroke
@@ -4385,16 +4513,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 153.67) (xy 140.97 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fb654423-f193-441b-b65c-67e82e7468ba")
-	)
-	(wire
-		(pts
 			(xy 245.11 128.27) (xy 247.65 128.27)
 		)
 		(stroke
@@ -4415,7 +4533,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 45.72) (xy 100.33 45.72)
+			(xy 81.28 45.72) (xy 106.68 45.72)
 		)
 		(stroke
 			(width 0)
@@ -4936,6 +5054,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 111.76 45.72 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "216faec5-e3b2-4fa4-97e2-3589e493d008")
+		(property "Reference" "Progra-VDD1"
+			(at 111.125 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Programador"
+			(at 111.125 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 111.76 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 111.76 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 111.76 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eb092c0a-aecc-4d0a-b4de-fddd648e46c1")
+		)
+		(instances
+			(project "Kicad_gamepad"
+				(path "/f3de3199-376f-414c-a9cd-9650fa72176a"
+					(reference "Progra-VDD1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 173.99 87.63 0)
 		(unit 1)
@@ -5071,6 +5253,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 190.5 140.97 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "35c86880-a4ac-4a62-aa7c-c5c0102201af")
+		(property "Reference" "Progra-MCLR/VPP1"
+			(at 189.865 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Programador"
+			(at 189.865 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 190.5 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 190.5 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 190.5 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2c92a65c-f5d4-4af7-b00a-32ffb9ece4a0")
+		)
+		(instances
+			(project "Kicad_gamepad"
+				(path "/f3de3199-376f-414c-a9cd-9650fa72176a"
+					(reference "Progra-MCLR/VPP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 212.09 140.97 270)
 		(unit 1)
@@ -5197,6 +5443,70 @@
 			(project ""
 				(path "/f3de3199-376f-414c-a9cd-9650fa72176a"
 					(reference "Puente1,1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 146.05 153.67 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3dc0ed67-801f-4fba-ba5b-9a2ee4fedec5")
+		(property "Reference" "Puente9"
+			(at 145.415 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Puente9"
+			(at 145.415 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 146.05 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 146.05 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 146.05 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "25109943-e27e-4865-8c53-b7e7ae4701cd")
+		)
+		(instances
+			(project "Kicad_gamepad"
+				(path "/f3de3199-376f-414c-a9cd-9650fa72176a"
+					(reference "Puente9")
 					(unit 1)
 				)
 			)
@@ -5756,6 +6066,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 86.36 133.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "79ec3f83-ee95-4ea2-b344-664ac2a8c252")
+		(property "Reference" "Progra-PGC1"
+			(at 86.995 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Programador"
+			(at 86.995 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 86.36 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 86.36 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 86.36 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bd08214c-671a-4c04-80d0-5075e35e9253")
+		)
+		(instances
+			(project "Kicad_gamepad"
+				(path "/f3de3199-376f-414c-a9cd-9650fa72176a"
+					(reference "Progra-PGC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 240.03 157.48 0)
 		(unit 1)
@@ -5971,6 +6345,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 110.49 36.83 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8b927ae3-0191-4d13-b2e9-2116fd70053c")
+		(property "Reference" "Progra-Vss1"
+			(at 109.855 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Programador"
+			(at 109.855 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 110.49 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 110.49 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 110.49 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1ba6a36c-26b9-404b-b521-e7d5c1290f20")
+		)
+		(instances
+			(project "Kicad_gamepad"
+				(path "/f3de3199-376f-414c-a9cd-9650fa72176a"
+					(reference "Progra-Vss1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 240.03 121.92 0)
 		(unit 1)
@@ -6101,71 +6539,6 @@
 			(project "Kicad_gamepad"
 				(path "/f3de3199-376f-414c-a9cd-9650fa72176a"
 					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x01_Pin")
-		(at 92.71 53.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "92f7ce4e-8bd3-45b2-96fb-ea084e222a24")
-		(property "Reference" "Puente4"
-			(at 93.345 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Puente3"
-			(at 93.345 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 92.71 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 92.71 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 92.71 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "55ee8ff2-b8f7-4469-9d28-9c19f7dc3565")
-		)
-		(instances
-			(project "Kicad_gamepad"
-				(path "/f3de3199-376f-414c-a9cd-9650fa72176a"
-					(reference "Puente4")
 					(unit 1)
 				)
 			)
@@ -6574,24 +6947,23 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x01_Pin")
-		(at 87.63 53.34 180)
+		(at 86.36 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a7f1fe83-524b-4b51-9aa9-f055107bcc29")
-		(property "Reference" "Puente3"
-			(at 86.995 48.26 0)
+		(uuid "af5b64e4-dcb5-425f-a86a-a2d4ea62d124")
+		(property "Reference" "Progra-PGD1"
+			(at 86.995 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "Puente3"
-			(at 86.995 50.8 0)
+		(property "Value" "Programador"
+			(at 86.995 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6599,7 +6971,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 87.63 53.34 0)
+			(at 86.36 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6608,7 +6980,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 87.63 53.34 0)
+			(at 86.36 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6617,7 +6989,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 87.63 53.34 0)
+			(at 86.36 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6626,12 +6998,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "5a8d8ad0-8cd2-43bb-bee0-754733200825")
+			(uuid "dbba0619-3f6b-44db-adba-79c8f16ea182")
 		)
 		(instances
 			(project "Kicad_gamepad"
 				(path "/f3de3199-376f-414c-a9cd-9650fa72176a"
-					(reference "Puente3")
+					(reference "Progra-PGD1")
 					(unit 1)
 				)
 			)
@@ -6777,6 +7149,71 @@
 			(project ""
 				(path "/f3de3199-376f-414c-a9cd-9650fa72176a"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 153.67 153.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cde26098-e6b6-4509-8fc5-38cac2cd3dd3")
+		(property "Reference" "Puente10"
+			(at 154.305 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Puente9"
+			(at 154.305 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 153.67 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 153.67 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 153.67 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47589c50-d3e5-4d84-8a50-787f61a7aa7a")
+		)
+		(instances
+			(project "Kicad_gamepad"
+				(path "/f3de3199-376f-414c-a9cd-9650fa72176a"
+					(reference "Puente10")
 					(unit 1)
 				)
 			)
