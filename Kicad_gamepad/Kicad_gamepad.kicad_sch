@@ -5876,7 +5876,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_VH_B5P-VH_1x05_P3.96mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
 			(at 76.2 48.26 0)
 			(effects
 				(font
