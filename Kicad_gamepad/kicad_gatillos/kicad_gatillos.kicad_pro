@@ -503,7 +503,7 @@
       "plot": "D:/PCB_Oscar_Gamepad_gatillos/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "kicad_gatillos.step",
       "svg": "",
       "vrml": ""
     },

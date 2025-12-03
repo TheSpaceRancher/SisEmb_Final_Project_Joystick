@@ -503,7 +503,7 @@
       "plot": "D:/Los_sexsons_ctrl/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Kicad_gamepad.step",
       "svg": "",
       "vrml": ""
     },
