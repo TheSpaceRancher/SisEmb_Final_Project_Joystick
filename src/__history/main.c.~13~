@@ -1,0 +1,28 @@
+#include <18F4550.h>
+#fuses HSPLL,NOWDT,NOPROTECT,NOLVP,NODEBUG,USBDIV,PLL5,CPUDIV1,VREGEN
+#use delay(clock=48000000)
+
+#define USB_HID_DEVICE TRUE
+#define USB_EP1_TX_ENABLE USB_ENABLE_INTERRUPT
+#define USB_EP1_TX_SIZE
+#include <pic18_usb.h>
+#include <usb_desc_kbmouse.h>
+#Include <usb.c>
+
+void main()
+{
+   int8 data[4]={1,2,3,4};
+   usb_init_cs();
+
+   while(TRUE)
+   {
+   usb_task();
+      if(usb_enumerated()){
+         while(TRUE){
+            delay_ms(5000);
+            usb_put_packet(1,data,4,USB_DTS_TOOGLE);
+         }
+      }
+   }
+
+}

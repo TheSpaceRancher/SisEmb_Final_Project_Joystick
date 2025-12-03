@@ -1,0 +1,70 @@
+#include <18F4550.h>
+
+#fuses HSPLL,NOWDT,NOPROTECT,NOLVP,NODEBUG,USBDIV,PLL5,CPUDIV1,VREGEN, XT
+#use delay(clock=48000000)
+
+#include <pic18_usb.h>
+#include <joy_control.h>
+#include <usb.c>
+
+#define JOY_AXIS_X 0
+#define JOY_AXIS_Y 1
+
+int8 adc_offset(int8 channel){
+   int i;
+   int32 sum = 0;
+   for(i=0;i<8;i++){
+      set_adc_channel(channel);
+      delay_us(20);
+      sum += read_adc();
+      delay_ms(5);
+   }
+   return (int8)(((sum / 8) * 255) / 1023);
+}
+
+int8 read_joystick(int8 channel, int8 offset){
+   set_adc_channel(channel);
+   delay_us(20);
+   
+   int16 adc = read_adc();
+   adc = ((adc*255) / 1023)- offset;
+   return (int8)adc;
+}
+
+void main()
+{
+   usb_init_cs();
+
+   int8 data[4];
+
+   int8 moveX = 0;
+   int8 moveY = 0;
+
+   int8 offsetX = 128;
+   int8 offsetY = 128;
+
+   setup_adc_ports(All_ANALOG);
+   setup_adc(ADC_CLOCK_INTERNAL);
+
+   set_tris_a(0b00000011);
+
+   offsetX = adc_offset(0);
+   offsetY = adc_offset(1);
+
+   while(TRUE)
+   {
+     
+      usb_task();
+
+      if(usb_enumerated()){
+
+         data[0] = 0;
+         data[1] = read_joystick(JOY_AXIS_X, offsetX); /* desplazamiento signed -127..+127 (mitad del ADC = 0) */
+         data[2] = read_joystick(JOY_AXIS_Y, offsetY);
+         data[3] = 0;
+
+         usb_put_packet(1, data, 4, USB_DTS_TOGGLE);
+      }
+      delay_ms(50);
+   }
+}

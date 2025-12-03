@@ -1,0 +1,64 @@
+#include <18F4550.h>
+
+#fuses HSPLL,NOWDT,NOPROTECT,NOLVP,NODEBUG,USBDIV,PLL5,CPUDIV1,VREGEN, XT
+#use delay(clock=48000000)
+
+#include <pic18_usb.h>
+#include <joy_control.h>
+#include <usb.c>
+
+#define BOTTON PIN_A0
+#define LED PIN_A1
+
+
+/* función de calibración eliminada: se restaura comportamiento previo
+   (normalización directa 0..255) */
+
+
+void main()
+{
+   usb_init_cs();
+
+   int8 data[4];
+   int16 ADCx;
+   int8 move = 0; /* movimiento signed -127..+127; la mitad del ADC (512) es el offset (0) */
+   int16 delta = 0;
+
+   /* configurar ADC (CCS): resolución 10 bits indicada por #device adc=10 */
+   setup_adc_ports(All_ANALOG);
+   setup_adc(ADC_CLOCK_INTERNAL);
+
+   /* RA0 (AN0) como entrada analógica; B como salidas para LEDs/depuración */
+   set_tris_a(0b00000001);
+
+   /* sin calibración: se normaliza directamente 0..255 */
+
+   while(TRUE)
+   {
+      /* seleccionar AN0 y esperar adquisición antes de leer */
+      set_adc_channel(0);
+      delay_us(20);
+      ADCx = read_adc(); /* devuelve 0..1023 con #device adc=10 */
+
+      /* Normalización centrada: la mitad (≈512) es el offset cero.
+         Calculamos delta = ADCx - 512 (rango aprox -512..+511) y lo
+         escalamos a signed 8-bit (-127..+127). */
+      delta = ADCx - 512;
+      move = (int8)((delta * 127) / 512);
+      /* clamp por seguridad (en caso de desbordes) */
+      if(move > 127) move = 127;
+      if(move < -127) move = -127;
+      usb_task();
+
+      if(usb_enumerated()){
+
+         data[0] = 0;
+         data[1] = move; /* desplazamiento signed -127..+127 (mitad del ADC = 0) */
+         data[2] = 0;
+         data[3] = 0;
+
+         usb_put_packet(1, data, 4, USB_DTS_TOGGLE);
+      }
+      delay_ms(50);
+   }
+}

@@ -1,0 +1,151 @@
+[PROJECT]
+Target=LIbraryusbmodifed.hex
+Processor_Text=PIC18F4550
+CCSVerions=5.112
+Compiler=PCH
+CCSVersion=5.112
+[Target Data]
+FileList=LIbraryusbmodifed.c
+[Directories]
+Include=
+[C:\Users\isaac\SistemasEmbebidos\virtuarusb\LIbraryusbmodifed]
+Type=4
+[mru-list]
+1=LIbraryusbmodifed.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=9
+D1=19-11-2025
+D1_L=12
+D1_L1=[31785]Project Opened.
+D1_L2=[31788]Started Editing.
+D1_L3=[32251]Stopped Editing.
+D1_L4=[32711]Started Editing.
+D1_L5=[33225]Stopped Editing.
+D1_L6=[34737]Started Editing.
+D1_L7=[34768]Stopped Editing.
+TotalEdit=122
+TotalDebug=0
+D1_E=14
+D1_D=0
+D1_L8=[34768]Project Closed.
+D1_L9=[34777]Project Opened.
+D1_L10=[35162]Started Editing.
+D1_L11=[35859]Stopped Editing.
+D1_L12=[36113]Project Closed.
+D2=21-11-2025
+D2_L=4
+D2_L1=[32068]Project Opened.
+D2_L2=[32080]Started Editing.
+D2_L3=[33963]Stopped Editing.
+D2_E=27
+D2_D=0
+D2_L4=[35457]Project Closed.
+D3=22-11-2025
+D3_L=43
+D3_L1=[49527]Project Opened.
+D3_L2=[49536]Started Editing.
+D3_L3=[49899]Stopped Editing.
+D3_L4=[50138]Started Editing.
+D3_L5=[50515]Stopped Editing.
+D3_L6=[50803]Started Editing.
+D3_L7=[51152]Stopped Editing.
+D3_L8=[51410]Started Editing.
+D3_L9=[51710]Stopped Editing.
+D3_L10=[52338]Started Editing.
+D3_L11=[52884]Stopped Editing.
+D3_L12=[53359]Started Editing.
+D3_L13=[53659]Stopped Editing.
+D3_L14=[53966]Started Editing.
+D3_L15=[54360]Stopped Editing.
+D3_L16=[55140]Started Editing.
+D3_L17=[55869]Stopped Editing.
+D3_L18=[55959]Started Editing.
+D3_L19=[56409]Stopped Editing.
+D3_L20=[56989]Started Editing.
+D3_L21=[58737]Stopped Editing.
+D3_L22=[60613]Started Editing.
+D3_L23=[61479]Stopped Editing.
+D3_L24=[63182]Started Editing.
+D3_L25=[63669]Stopped Editing.
+D3_L26=[64588]Started Editing.
+D3_L27=[64906]Stopped Editing.
+D3_L28=[64994]Started Editing.
+D3_L29=[65577]Stopped Editing.
+D3_L30=[66655]Started Editing.
+D3_L31=[67226]Stopped Editing.
+D3_L32=[68424]Started Editing.
+D3_L33=[68724]Stopped Editing.
+D3_L34=[70058]Started Editing.
+D3_L35=[70358]Stopped Editing.
+D3_L36=[73516]Started Editing.
+D3_L37=[73852]Stopped Editing.
+D3_E=68
+D3_D=0
+D3_L38=[74579]Project Closed.
+D3_L39=[74816]Project Opened.
+D3_L40=[74822]Started Editing.
+D3_L41=[74941]Stopped Editing.
+D3_L42=[74942]Project Closed.
+D3_L43=[84301]Project Opened.
+D4=23-11-2025
+D4_L=1
+D4_L1=[9295]Project Closed.
+D5=24-11-2025
+D5_L=13
+D5_L1=[33573]Project Opened.
+D5_L2=[34884]Started Editing.
+D5_L3=[35207]Stopped Editing.
+D5_L4=[35328]Started Editing.
+D5_L5=[35629]Stopped Editing.
+D5_L6=[77410]Project Opened.
+D5_L7=[77671]Started Editing.
+D5_L8=[77971]Stopped Editing.
+D5_L9=[77979]Started Editing.
+D5_L10=[78473]Stopped Editing.
+D5_L11=[82353]Started Editing.
+D5_L12=[82657]Stopped Editing.
+D5_E=4
+D5_D=0
+D5_L13=[85741]Project Closed.
+D6=25-11-2025
+D6_L=7
+D6_L1=[72254]Project Opened.
+D6_L2=[72466]Started Editing.
+D6_L3=[73269]Stopped Editing.
+D6_L4=[82938]Started Editing.
+D6_L5=[83261]Stopped Editing.
+D6_L6=[83901]Started Editing.
+D6_L7=[84206]Stopped Editing.
+D7=26-11-2025
+D7_E=9
+D7_D=0
+D7_L=1
+D7_L1=[35789]Project Closed.
+D8=28-11-2025
+D8_L=1
+D8_L1=[12676]Project Opened.
+D9=02-12-2025
+D9_L=2
+D9_L1=[85297]Project Opened.
+D9_L2=[85308]Project Closed.
+
+[Opened Files]
+1=LIbraryusbmodifed.c
+t1=1
+Count=3
+2=..\..\..\..\Program Files (x86)\PICC\Drivers\usb_desc_mouse.h
+t2=1
+3=..\..\..\..\Program Files (x86)\PICC\Drivers\usb.h
+t3=1026
+[LIbraryusbmodifed.c]
+Type=4
+
+[defines]
+buildcount=104
+[Units]
+Count=1
+1=LIbraryusbmodifed (main)

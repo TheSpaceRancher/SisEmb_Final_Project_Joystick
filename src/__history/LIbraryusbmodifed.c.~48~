@@ -1,0 +1,57 @@
+#include <18F4550.h>
+
+#fuses HSPLL,NOWDT,NOPROTECT,NOLVP,NODEBUG,USBDIV,PLL5,CPUDIV1,VREGEN, XT
+#use delay(clock=48000000)
+
+
+#include <pic18_usb.h>
+#include <joy_control.h>
+#include <usb.c>
+
+#define BOTTON PIN_A0
+#define LED PIN_A1
+
+#device adc=0
+
+void main()
+{
+   usb_init_cs();
+
+   int8 data[4];
+   int16 ADCx;
+   int8 moveX = 0;
+
+   /* configurar ADC (CCS): resolución 10 bits indicada por #device adc=10 */
+   setup_adc_ports(All_ANALOG);
+   setup_adc(ADC_CLOCK_INTERNAL);
+
+   /* RA0 (AN0) como entrada analógica; B como salidas para LEDs/depuración */
+   set_tris_a(0b00000001);
+   set_tris_b(0b00000000);
+   output_b(0b00000000);
+
+   while(TRUE)
+   {
+      /* seleccionar AN0 y esperar adquisición antes de leer */
+      set_adc_channel(0); /* AN0 */
+      delay_us(20);
+      ADCx = read_adc(); /* devuelve 0..1023 con #device adc=10 */
+
+      /* mapear 0..1023 a -127..+127 (signed int8) centrando en 512 */
+      moveX = (int8)((ADCx - 512) / 4);
+      
+      usb_task();
+
+      if(usb_enumerated()){
+
+         data[0] = 0;
+         data[1] = moveX; /* movimiento X (signed) */
+         data[2] = 0;
+         data[3] = 0;
+
+         usb_put_packet(1, data, 4, USB_DTS_TOGGLE);
+      }
+      delay_ms(50);
+   }
+
+}

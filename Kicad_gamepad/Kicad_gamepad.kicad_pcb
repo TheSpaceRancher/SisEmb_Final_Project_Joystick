@@ -2364,7 +2364,11 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "Progra-VDD1"
+<<<<<<< Updated upstream
 			(at 8.07 -0.02 0)
+=======
+			(at 6 0 0)
+>>>>>>> Stashed changes
 			(layer "F.SilkS")
 			(uuid "5808c722-f31a-4164-b7c1-ae6651df4e8f")
 			(effects
@@ -3353,7 +3357,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "Progra-PGC1"
-			(at 0 -2.38 0)
+			(at -6.5 0.5 0)
 			(layer "F.SilkS")
 			(uuid "62beca3e-57d4-44e0-aac6-0d8f13828eab")
 			(effects
@@ -10289,7 +10293,11 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "Progra-Vss1"
+<<<<<<< Updated upstream
 			(at -6.24 1.13 0)
+=======
+			(at -7 -4 0)
+>>>>>>> Stashed changes
 			(layer "F.SilkS")
 			(uuid "fe3967eb-bd75-4cb3-ac6a-6a2b0f207ae2")
 			(effects

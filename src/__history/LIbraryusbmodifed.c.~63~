@@ -1,0 +1,63 @@
+#include <18F4550.h>
+
+#fuses HSPLL,NOWDT,NOPROTECT,NOLVP,NODEBUG,USBDIV,PLL5,CPUDIV1,VREGEN, XT
+#use delay(clock=48000000)
+
+#include <pic18_usb.h>
+#include <joy_control.h>
+#include <usb.c>
+
+/* Lee 'samples' lecturas del ADC en 'channel' y devuelve el promedio */
+int16 adc_read_average(int8 channel, int8 samples){
+   int i;
+   int32 sum = 0;
+   int16 v;
+   for(i=0;i<samples;i++){
+      set_adc_channel(channel);
+      delay_us(20);
+      v = read_adc();
+      sum += v;
+      delay_ms(5);
+   }
+   return (int16)(sum / samples);
+}
+
+void main()
+{
+   usb_init_cs();
+
+   int8 data[4];
+   int16 ADCx;
+   int8 move = 0;
+   int16 delta = 0;
+   int16 center = 512; /* offset calibrado */
+
+   setup_adc_ports(All_ANALOG);
+   setup_adc(ADC_CLOCK_INTERNAL);
+
+   set_tris_a(0b00000001);
+
+   set_adc_channel(0);
+   center = read_adc();
+   while(TRUE)
+   {
+      set_adc_channel(0);
+      delay_us(20);
+      ADCx = read_adc();
+      /* usar el centro calibrado como offset */
+      delta = (ADCx*255)/1024;
+      move = (int8)(delta - center);
+      usb_task();
+
+      if(usb_enumerated()){
+
+         data[0] = 0;
+         data[1] = move; /* desplazamiento signed -127..+127 (mitad del ADC = 0) */
+         data[2] = 0;
+         data[3] = 0;
+
+         usb_put_packet(1, data, 4, USB_DTS_TOGGLE);
+      }
+      delay_ms(50);
+   }
+}

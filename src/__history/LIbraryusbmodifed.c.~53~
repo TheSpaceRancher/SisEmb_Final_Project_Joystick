@@ -1,0 +1,82 @@
+#include <18F4550.h>
+
+#fuses HSPLL,NOWDT,NOPROTECT,NOLVP,NODEBUG,USBDIV,PLL5,CPUDIV1,VREGEN, XT
+#use delay(clock=48000000)
+
+
+#include <pic18_usb.h>
+#include <joy_control.h>
+#include <usb.c>
+
+#define BOTTON PIN_A0
+#define LED PIN_A1
+
+
+int16 joy_Calibration(int8 channel){
+   int i;
+   int32 sum = 0;
+   int16 v;
+   /* leer varias muestras y promediar para obtener el "cero" */
+   for(i=0;i<8;i++){
+      set_adc_channel(channel);
+      delay_us(20);
+      v = read_adc();
+      sum += v;
+      delay_ms(5);
+   }
+   return (int16)(sum / 8);
+}
+
+
+void main()
+{
+   usb_init_cs();
+
+   int8 data[4];
+   int16 ADCx;
+   int16 mapped_adc = 0; /* (no usado cuando enviamos signed) */
+   int16 center = 0;
+   int16 delta = 0;
+   int8 move = 0;
+
+   /* configurar ADC (CCS): asumimos ADC de 10 bits (0..1023) sin usar
+      la directiva #device adc=10 (compatibilidad con toolchains). */
+   setup_adc_ports(All_ANALOG);
+   setup_adc(ADC_CLOCK_INTERNAL);
+
+   /* RA0 (AN0) como entrada analógica; B como salidas para LEDs/depuración */
+   set_tris_a(0b00000001);
+
+   /* calibración inicial: leer ADC y usar como cero */
+   center = joy_Calibration();
+
+   while(TRUE)
+   {
+      /* seleccionar AN0 y esperar adquisición antes de leer */
+      set_adc_channel(0);
+      delay_us(20);
+      ADCx = read_adc(); /* devuelve 0..1023 (ADC 10 bits) */
+
+      /* calcular delta respecto al centro calibrado */
+      delta = ADCx - center; /* puede ser negativo */
+      /* mapear delta (-512..+511) a signed int8 (-127..+127) */
+      move = (int8)((delta * 127) / 512);
+      /* clamp por seguridad */
+      if(move > 127) move = 127;
+      if(move < -127) move = -127;
+      
+      usb_task();
+
+      if(usb_enumerated()){
+
+         data[0] = 0;
+         data[1] = move; /* desplazamiento signed -127..+127 */
+         data[2] = 0;
+         data[3] = 0;
+
+         usb_put_packet(1, data, 4, USB_DTS_TOGGLE);
+      }
+      delay_ms(50);
+   }
+
+}
